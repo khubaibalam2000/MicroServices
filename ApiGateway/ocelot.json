@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/AdminEvents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54540
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminEvents",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/AdminEvents/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54540
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminEvents/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/AdminEvents/search/{toSearch}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54540
+        }
+      ],
+      "UpstreamPathTemplate": "/AdminEvents/search/{toSearch}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54540
+        }
+      ],
+      "UpstreamPathTemplate": "/WeatherForecast",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "X-Correlation-Id",
+    "BaseUrl": "http://localhost:5249"
+  }
+}
